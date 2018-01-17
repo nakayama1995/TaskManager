@@ -2,7 +2,7 @@
 カラム一覧
 name:string
 detail:text
-tag:string
+tag:stringgit
 priority:integer
 status:string only(未着手、着手、完了)
 deadline:datetime

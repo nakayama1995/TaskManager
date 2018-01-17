@@ -1,0 +1,16 @@
+<h1>This is new page</h1>
+<%= form_for :task, url: tasks_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :detail %><br>
+    <%= f.text_area :detail %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
