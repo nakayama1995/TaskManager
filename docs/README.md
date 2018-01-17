@@ -2,11 +2,11 @@
 カラム一覧
 name:string
 detail:text
+tag:string
 priority:integer
-status:CHAR only(未着手、着手、完了)
-deadline:TIMESTAMP
-tag:CHAR
-user_id:CHAR foreign_key(table:users, colum:id)
+status:string only(未着手、着手、完了)
+deadline:datetime
+user_id: foreign_key(table:users, colum:id)
 
 テーブル名:users
 カラム一覧
