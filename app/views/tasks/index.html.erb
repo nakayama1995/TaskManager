@@ -1,3 +1,4 @@
+<%= notice %>
 <h1>This is index page, Hello</h1>
 <table>
   <tr>
@@ -11,6 +12,7 @@
       <td><%= task.detail %></td>
       <td><%= link_to 'Edit', edit_task_path(task) %></td>
       <td><%= link_to 'Show', task_path(task) %></td>
+      <td><%= link_to 'DELETE', task_path(task), method: :delete %></td>
     </tr>
   <% end %>
 </table>
