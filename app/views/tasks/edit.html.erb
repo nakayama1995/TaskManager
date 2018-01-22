@@ -2,13 +2,13 @@
 
 <%= form_for @task , url: task_path(@task) do |f| %>
   <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </p>
 
   <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.label :detail %><br>
+    <%= f.text_area :detail %>
   </p>
 
   <p>
