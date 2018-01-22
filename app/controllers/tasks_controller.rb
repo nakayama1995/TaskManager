@@ -26,7 +26,7 @@ class TasksController < ApplicationController
     if @task.update(task_params)
       redirect_to @task, notice:'taskを更新しました'
     else
-      render 'edit', notice:'変更がありません'
+      render 'edit'
     end
   end
 
