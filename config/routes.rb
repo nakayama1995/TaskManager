@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   #get 'tasks/show'
   #get 'tasks/new'
   #get 'tasks/edit'
-  post 'tasks/' => 'tasks#create'
+  # post 'tasks/' => 'tasks#create'
 
 
   root 'tasks#index'
