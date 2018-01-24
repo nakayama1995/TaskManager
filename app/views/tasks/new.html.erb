@@ -28,6 +28,11 @@
     <%= f.datetime_select :deadline %>
   </p>
 
+  <p>
+    <%= f.label "ステータス" %><br>
+    <%= f.select :status, [["着手", "着手"],["未着手", "未着手"],["完了", "完了"]] %>
+  </p>
+
 
   <p>
     <%= f.submit %>

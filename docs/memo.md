@@ -18,3 +18,5 @@ herokuを使えば、開発したWEBアプリケーションを面倒な手続�
 https://git.heroku.com/peaceful-inlet-72767.git
 
 Gemfileを変更したら $ bundle install で変更を反映する
+
+Ruby on Rails で、日付・時刻のバリデーションをするなら ValidatesTimeliness という gem がおすすめです。

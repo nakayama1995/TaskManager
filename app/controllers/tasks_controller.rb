@@ -51,7 +51,7 @@ class TasksController < ApplicationController
 
   private
     def task_params
-      params.require(:task).permit(:name, :detail, :deadline)
+      params.require(:task).permit(:name, :detail, :deadline, :status)
     end
 
     def sort_direction
