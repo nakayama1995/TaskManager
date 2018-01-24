@@ -18,6 +18,5 @@
     </tr>
   <% end %>
 </table>
-
+<%= link_to t(:deadline_sort_desc), method: :get , sorting: 'desc' %> | <%= link_to t(:deadline_sort_asc), method: :get , sorting: 'asc' %><br>
 <%= link_to t(:new), '/tasks/new' %><br>
-<%= link_to "ソート", '/tasks/new' %><br>

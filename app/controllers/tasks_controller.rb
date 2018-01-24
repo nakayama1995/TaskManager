@@ -4,6 +4,12 @@ class TasksController < ApplicationController
     #@tasks = Task.all
     @tasks = Task.order("created_at desc")
     #@task = Task.all.order(sort_column + ' ' + sort_direction)
+    if params[:sorting] == "desc"
+      @tasks = Task.order("deadline desc")
+    end
+    if params[:sorting] == "asc"
+      #@tasks = Task.order("deadline asc")
+    end
   end
 
   def new

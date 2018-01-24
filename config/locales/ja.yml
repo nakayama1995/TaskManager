@@ -11,6 +11,8 @@ ja:
   update_failed: "：更新に失敗しました"
   update_failed: "タスクを更新しました"
   delete_succeed: タスクを削除しました
+  deadline_sort_desc: 締切(降順)
+  deadline_sort_asc: 締切(昇順)
 
 
 

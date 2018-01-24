@@ -42,3 +42,5 @@ en:
   update_failed: ":Failed to Update"
   update_succeed: "The task is Updated"
   delete_succeed: The task is deleted
+  deadline_sort_desc: Deadline(DESCEND)
+  deadline_sort_asc: Deadline(ASCEND)
