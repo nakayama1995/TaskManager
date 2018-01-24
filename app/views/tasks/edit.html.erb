@@ -4,7 +4,7 @@
 
 <% if @task.errors.any? %>
   <div id="error_explanation">
-    <h2><%= pluralize(@task.errors.count, "error") %> 更新に失敗しました:</h2>
+    <h2><%= pluralize(@task.errors.count, "error") %> <%=t(:update_failed)%></h2>
     <ul>
       <% @task.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -13,20 +13,20 @@
   </div>
 <% end %>
 
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
+<p>
+  <%= f.label t(:name) %><br>
+  <%= f.text_field :name %>
+</p>
 
-  <p>
-    <%= f.label :detail %><br>
-    <%= f.text_area :detail %>
-  </p>
+<p>
+  <%= f.label t(:detail) %><br>
+  <%= f.text_area :detail %>
+</p>
 
-  <p>
-    <%= f.label :deadline %><br>
-    <%= f.datetime_select :deadline %>
-  </p>
+<p>
+  <%= f.label t(:deadline) %><br>
+  <%= f.datetime_select :deadline %>
+</p>
 
   <p>
     <%= f.submit %>

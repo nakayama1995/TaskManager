@@ -1,6 +1,9 @@
 class TasksController < ApplicationController
+  helper_method :sort_column, :sort_direction
   def index
+    #@tasks = Task.all
     @tasks = Task.order("created_at desc")
+    #@task = Task.all.order(sort_column + ' ' + sort_direction)
   end
 
   def new
@@ -11,7 +14,7 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
 
     if @task.save
-      redirect_to @task, notice:'taskを作成しました'
+      redirect_to @task, notice:t(:create_succeed)
     else
       render 'new'
     end
@@ -24,7 +27,7 @@ class TasksController < ApplicationController
   def update
     @task = Task.find(params[:id])
     if @task.update(task_params)
-      redirect_to @task, notice:'taskを更新しました'
+      redirect_to @task, notice:t(:update_succeed)
     else
       render 'edit'
     end
@@ -37,12 +40,21 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to tasks_path, notice:'taskの削除に成功しました'
+    redirect_to tasks_path, notice:t(:delete_succeed)
   end
 
   private
     def task_params
       params.require(:task).permit(:name, :detail, :deadline)
     end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ?  params[:direction] : "asc"
+    end
+
+    def sort_column
+        Task.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    end
+
 
 end

@@ -31,3 +31,14 @@
 
 en:
   hello: "Hello world"
+  hello_world: Hello world!
+  hello_flash: Hello flash!
+  name: Name
+  detail: Detail
+  deadline: Deadline
+  new: "New Task"
+  create_failed: ":Failed to Create"
+  create_succeed: "The task is created"
+  update_failed: ":Failed to Update"
+  update_succeed: "The task is Updated"
+  delete_succeed: The task is deleted

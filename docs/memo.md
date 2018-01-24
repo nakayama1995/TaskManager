@@ -16,3 +16,5 @@ PaaS（Platform as a Service の略、パースまたはパーズ）とは、イ
 herokuを使えば、開発したWEBアプリケーションを面倒な手続きなく簡単に公開することができます。
 
 https://git.heroku.com/peaceful-inlet-72767.git
+
+Gemfileを変更したら $ bundle install で変更を反映する
