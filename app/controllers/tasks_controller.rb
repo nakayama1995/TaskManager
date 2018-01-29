@@ -5,10 +5,10 @@ class TasksController < ApplicationController
     @tasks = Task.search_name(params[:search1]).search_status(params[:search2]).order("created_at desc").page(params[:page]).per(5)
     #@task = Task.all.order(sort_column + ' ' + sort_direction)
     if params[:sorting] == "desc"
-      @tasks = Task.order("deadline desc")
+      @tasks = Task.order("deadline desc").page(params[:page])
     end
     if params[:sorting] == "asc"
-      @tasks = Task.order("deadline asc")
+      @tasks = Task.order("deadline asc").page(params[:page])
     end
   end
 
