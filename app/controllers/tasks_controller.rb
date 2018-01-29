@@ -2,13 +2,13 @@ class TasksController < ApplicationController
   helper_method :sort_column, :sort_direction
   def index
     #@tasks = Task.all
-    @tasks = Task.order("created_at desc")
+    @tasks = Task.search(params[:search]).order("created_at desc")
     #@task = Task.all.order(sort_column + ' ' + sort_direction)
     if params[:sorting] == "desc"
       @tasks = Task.order("deadline desc")
     end
     if params[:sorting] == "asc"
-      #@tasks = Task.order("deadline asc")
+      @tasks = Task.order("deadline asc")
     end
   end
 
@@ -48,6 +48,11 @@ class TasksController < ApplicationController
     @task.destroy
     redirect_to tasks_path, notice:t(:delete_succeed)
   end
+
+  def search
+    @tasks = search(params[:search])
+  end
+
 
   private
     def task_params

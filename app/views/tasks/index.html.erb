@@ -21,4 +21,18 @@
   <% end %>
 </table>
 <%= link_to t(:deadline_sort_desc), method: :get , sorting: 'desc' %> | <%= link_to t(:deadline_sort_asc), method: :get , sorting: 'asc' %><br>
+
+<%#= form_tag("tasks/search", method: "get") do %>
+  <%#= text_field_tag :search, params[:search] %>
+  <%#= submit_tag "Search", :name => nil %><br>
+<%# end %>
+
+<%= form_tag tasks_path, :method => 'get' do %> <%#　projects_pathはモデル名で読みかえること %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search for name", :name => nil %><br>
+  </p>
+<% end %>
+
+
 <%= link_to t(:new), '/tasks/new' %><br>

@@ -3,10 +3,7 @@ Rails.application.routes.draw do
   #get 'tasks/create'
   #get 'tasks/show'
   #get 'tasks/new'
-  #get 'tasks/edit'
-  # post 'tasks/' => 'tasks#create'
-
-
+  #match 'tasks/search' => 'tasks#search', :via => :get # = get 'tasks/search' => 'tasks#search'
   root 'home#index'
   resources :tasks
 
