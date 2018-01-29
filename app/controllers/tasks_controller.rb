@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   helper_method :sort_column, :sort_direction
   def index
     #@tasks = Task.all
-    @tasks = Task.search(params[:search]).order("created_at desc")
+    @tasks = Task.search_name(params[:search1]).search_status(params[:search2]).order("created_at desc")
     #@task = Task.all.order(sort_column + ' ' + sort_direction)
     if params[:sorting] == "desc"
       @tasks = Task.order("deadline desc")

@@ -29,10 +29,18 @@
 
 <%= form_tag tasks_path, :method => 'get' do %> <%#　projects_pathはモデル名で読みかえること %>
   <p>
-    <%= text_field_tag :search, params[:search] %>
+    <%= text_field_tag :search1, params[:search1] %>
     <%= submit_tag "Search for name", :name => nil %><br>
   </p>
 <% end %>
+
+<%= form_tag tasks_path, :method => 'get' do %> <%#　projects_pathはモデル名で読みかえること %>
+  <p>
+    <%= text_field_tag :search2, params[:search2] %>
+    <%= submit_tag "Search for status", :status => nil %><br>
+  </p>
+<% end %>
+
 
 
 <%= link_to t(:new), '/tasks/new' %><br>
