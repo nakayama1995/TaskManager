@@ -20,5 +20,15 @@ class Task < ApplicationRecord
     end
   end
 
+  def priority_text
+    if priority == 0
+      return '低'
+    elsif priority == 1
+      return '中'
+    else
+      return '高'
+    end
+  end
+
 
 end

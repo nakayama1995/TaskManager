@@ -33,9 +33,16 @@
   <%= f.text_field :status %>
 </p>
 
-  <p>
-    <%= f.submit %>
-  </p>
+<p>優先度<br>
+  <label><%= f.radio_button :priority, "高" %> 高 </label>
+  <label><%= f.radio_button :priority, "中", {:checked => true}%> 中</label>
+  <label><%= f.radio_button :priority, "低" %> 低 </label>
+</p>
+
+
+<p>
+  <%= f.submit %>
+</p>
 <% end %>
 
 <%= link_to 'Back', tasks_path %>

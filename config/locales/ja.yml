@@ -5,6 +5,8 @@ ja:
   name: 名前
   detail: 詳細
   deadline: 締切
+  status: 状態
+  priority: 優先度
   new: "新規作成"
   create_failed: "：作成に失敗しました"
   create_succeed: "タスクを作成しました"

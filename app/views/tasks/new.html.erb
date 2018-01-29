@@ -33,6 +33,12 @@
     <%= f.select :status, [["着手", "着手"],["未着手", "未着手"],["完了", "完了"]] %>
   </p>
 
+  <p>優先度<br>
+    <label><%= f.radio_button :priority, 2 %> 高 </label>
+    <label><%= f.radio_button :priority, 1, {:checked => true}%> 中</label>
+    <label><%= f.radio_button :priority, 0 %> 低 </label>
+  </p>
+
   <p>
     <%= f.submit %>
   </p>

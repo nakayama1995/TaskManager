@@ -36,6 +36,8 @@ en:
   name: Name
   detail: Detail
   deadline: Deadline
+  status: Status
+  priority: Priority
   new: "New Task"
   create_failed: ":Failed to Create"
   create_succeed: "The task is created"
