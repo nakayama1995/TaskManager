@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw] #debuggerメソッド
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
@@ -59,4 +59,6 @@ gem 'kaminari' #ページネーションライブラリ
 
 gem 'bootstrap', '~> 4.0.0'
 
-gem 'bcrypt', '3.1.7'
+gem 'bcrypt', '3.1.7' #secure password
+
+#gem 'byebug', '9.0.6' #debuggerメソッド
