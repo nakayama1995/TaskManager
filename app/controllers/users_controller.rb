@@ -14,10 +14,11 @@ class UsersController < ApplicationController
     #@user = User.new(params[:user]) #セキュリティ上、危険　Railsで禁止されている記述
     @user = User.new(user_params)
     if @user.save
+      log_in @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
     else
-      render 'new' #viewかアクションか？s
+      render 'new'
   end
 
   end
