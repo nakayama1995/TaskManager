@@ -1,12 +1,7 @@
 Rails.application.routes.draw do
   get 'users/new'
-
-  #get 'tasks/index'
-  #get 'tasks/create'
-  #get 'tasks/show'
-  #get 'tasks/new'
-  #match 'tasks/search' => 'tasks#search', :via => :get # = get 'tasks/search' => 'tasks#search'
-  get 'signup'  => 'users#new'
+  get '/signup', to: 'users#new'
+  post '/signup',  to: 'users#create'
   root 'home#index'
   resources :tasks
 

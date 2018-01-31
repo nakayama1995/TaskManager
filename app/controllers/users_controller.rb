@@ -7,5 +7,24 @@ class UsersController < ApplicationController
 
   def new
     #debugger
+    @user = User.new
   end
+  def create
+    #ユーザーが送信したデータをまるごとUser.newに渡しているこ
+    #@user = User.new(params[:user]) #セキュリティ上、危険　Railsで禁止されている記述
+    @user = User.new(user_params)
+    if @user.save
+      flash[:success] = "Welcome to the Sample App!"
+      redirect_to @user
+    else
+      render 'new' #viewかアクションか？s
+  end
+
+  end
+
+  private
+    def user_params
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
+
 end
